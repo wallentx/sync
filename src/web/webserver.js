@@ -242,13 +242,13 @@ module.exports = {
             res.cookie("auth", auth, {
                 domain: Config.get("http.root-domain-dotted"),
                 expires: expiration,
-                httpOnly: true,
+                httpOnly: false,
                 signed: true
             });
         } else {
             res.cookie("auth", auth, {
                 expires: expiration,
-                httpOnly: true,
+                httpOnly: false,
                 signed: true
             });
         }

@@ -16,7 +16,7 @@ exports.init = function csrfInit (domain) {
             res.cookie("_csrf", secret,  {
                 domain: domain,
                 signed: true,
-                httpOnly: true
+                httpOnly: false
             });
         }
 

@@ -40,7 +40,7 @@ export function ipSessionCookieMiddleware(req, res, next) {
     if (!hasSession) {
         res.cookie('ip-session', createIPSessionCookie(req.realIP, firstSeen), {
             signed: true,
-            httpOnly: true,
+            httpOnly: false,
             expires: NO_EXPIRATION
         });
     }
